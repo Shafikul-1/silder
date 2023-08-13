@@ -23,7 +23,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div id="carosul" class="h-[25rem] w-[full] overflow-hidden">
-     <div class="h-[30rem] w-full  overflow-hidden" v-for="(image, index) in AllImg" :key="index">
+     <div class=" w-full  overflow-hidden" v-for="(image, index) in AllImg" :key="index">
       <img :src="image" alt="" class="w-[100%] h-[100%] bg-gray-600">
      </div>
   </div>
