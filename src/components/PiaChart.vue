@@ -1,9 +1,9 @@
-
+ 
 <script setup>
-import {  onMounted } from 'vue'
+import {  onMounted, onBeforeUnmount } from 'vue'
 
 let cart = null
-const dataSet =  [300, 50, 100]
+const dataSet =  [300, 50, 100, 200, 320]
 
 const data = {
   labels: [
@@ -31,11 +31,16 @@ onMounted(() => {
     cart = new Chart(ctx, config)
 })
 
+onBeforeUnmount(() => {
+  if (cart) {
+    cart.destroy();
+  }
+});
 </script>
 
 <template>
     <div>
-        <div class="bg-gray-400">
+        <div class="bg-gray-400 w-[40rem] h-[40rem]" >
             <canvas id="myChart"></canvas>
         </div>
     </div>
@@ -44,4 +49,4 @@ onMounted(() => {
 
 <style scoped>
 
-</style>
+</style> 
