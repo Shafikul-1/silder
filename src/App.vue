@@ -1,12 +1,10 @@
-<script setup>
- import hellow from './components/HelloWorld.vue'
+<script setup> 
  import carosul from './components/Carosul.vue'
 </script>
 
 <template>
 
-  <!-- <carosul/>  -->
-  <hellow/>
+  <carosul/> 
 </template>
 
 <style scoped>
